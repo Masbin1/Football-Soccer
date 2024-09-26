@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_soccer_standings_tree" model="ir.ui.view">
+        <field name="name">soccer.standings.tree</field>
+        <field name="model">soccer.standings</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="rank"/>
+                <field name="club_id"/>
+                <field name="matches_played" string="Ma"/>
+                <field name="wins" string="Me"/>
+                <field name="draws" string="S"/>
+                <field name="losses" string="K"/>
+                <field name="goals_for" string="GM"/>
+                <field name="goals_against" string="GK"/>
+                <field name="points" string="Point"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_soccer_standings" model="ir.actions.act_window">
+        <field name="name">Soccer Standings</field>
+        <field name="res_model">soccer.standings</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <menuitem id="menu_soccer_standings" name="Standings" parent="menu_soccer_league" action="action_soccer_standings" sequence="30"/>
+</odoo>

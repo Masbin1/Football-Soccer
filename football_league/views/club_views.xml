@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_soccer_club_form" model="ir.ui.view">
+        <field name="name">soccer.club.form</field>
+        <field name="model">soccer.club</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="city"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_soccer_club_tree" model="ir.ui.view">
+        <field name="name">soccer.club.tree</field>
+        <field name="model">soccer.club</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="city"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_soccer_club" model="ir.actions.act_window">
+        <field name="name">Soccer Clubs</field>
+        <field name="res_model">soccer.club</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_soccer_league" name="Soccer League" sequence="10"/>
+    <menuitem id="menu_soccer_club" name="Clubs" parent="menu_soccer_league" action="action_soccer_club" sequence="10"/>
+</odoo>

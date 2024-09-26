@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_soccer_club,access_soccer_club,model_soccer_club,base.group_user,1,1,1,1
+access_soccer_match,access_soccer_match,model_soccer_match,base.group_user,1,1,1,1
+access_soccer_match_line,access_soccer_match_line,model_soccer_match_line,base.group_user,1,1,1,1
+access_soccer_standings,access_soccer_standings,model_soccer_standings,base.group_user,1,1,1,1
